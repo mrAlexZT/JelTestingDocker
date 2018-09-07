@@ -4,7 +4,7 @@ FROM debian:stretch
 RUN groupadd jelastic_qa && \
     useradd -s /usr/sbin/nologin -g jelastic_qa jelastic_qa
 
-ADD Jel_QA_Test_File.txt /tmp/Jel_QA_Test_File.txt
+ADD Jel_QA_Test_File.txt /var/log/Jel_QA_Test_File.txt
 
 USER jelastic_qa
-CMD ["cat", "/tmp/Jel_QA_Test_File.txt"]
+CMD ["cat", "/var/log/Jel_QA_Test_File.txt"]
